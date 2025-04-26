@@ -1,12 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useEffect } from 'react';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import ProductShowcase from '../components/ProductShowcase';
+import ProductGrid from '../components/ProductGrid';
+import BenefitsSection from '../components/BenefitsSection';
+import InstagramGallery from '../components/InstagramGallery';
+import Footer from '../components/Footer';
 
 const Index = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-grow">
+        <Hero />
+        <ProductShowcase />
+        <ProductGrid />
+        <BenefitsSection />
+        <InstagramGallery />
+      </main>
+      <Footer />
     </div>
   );
 };

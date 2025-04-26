@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				yuvan: {
+					blue: "#1EAEDB",
+					yellow: "#F9B208",
+					red: "#E63946",
+					orange: "#F97316",
+					green: "#52B69A"
 				}
 			},
 			borderRadius: {
@@ -84,11 +92,46 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' },
+				},
+				'float-left-right': {
+					'0%, 100%': { transform: 'translateX(0)' },
+					'50%': { transform: 'translateX(-10px)' },
+				},
+				'rotate-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' },
+				},
+				'fade-in-up': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' },
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' },
+				},
+				'zoom-in': {
+					'0%': { transform: 'scale(0.95)', opacity: '0' },
+					'100%': { transform: 'scale(1)', opacity: '1' },
+				},
+				'bounce-light': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-5px)' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+				'float-left-right': 'float-left-right 3s ease-in-out infinite',
+				'rotate-slow': 'rotate-slow 15s linear infinite',
+				'fade-in-up': 'fade-in-up 0.6s ease-out forwards',
+				'fade-in': 'fade-in 0.6s ease-out forwards',
+				'zoom-in': 'zoom-in 0.6s ease-out forwards',
+				'bounce-light': 'bounce-light 2s ease-in-out infinite',
 			}
 		}
 	},

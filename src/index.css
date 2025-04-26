@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 199 80% 49%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -33,22 +34,6 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
@@ -79,14 +64,6 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -97,5 +74,58 @@
 
   body {
     @apply bg-background text-foreground;
+    scroll-behavior: smooth;
   }
+
+  .hero-gradient {
+    background-image: radial-gradient(circle, #1EAEDB 0%, #0d9bd0 100%);
+    overflow: hidden;
+  }
+
+  .snack-card {
+    transition: all 0.3s ease;
+  }
+
+  .snack-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .benefits-section {
+    background-image: url('/lovable-uploads/41f283c9-7c81-4d27-a7a1-815cadb40663.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  .social-image {
+    filter: brightness(1);
+    transition: all 0.3s ease;
+  }
+  
+  .social-image:hover {
+    filter: brightness(1.1);
+    transform: scale(1.03);
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .staggered-fade-in > * {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  
+  .staggered-fade-in > *:nth-child(1) { animation: fadeIn 0.4s 0.1s forwards; }
+  .staggered-fade-in > *:nth-child(2) { animation: fadeIn 0.4s 0.2s forwards; }
+  .staggered-fade-in > *:nth-child(3) { animation: fadeIn 0.4s 0.3s forwards; }
+  .staggered-fade-in > *:nth-child(4) { animation: fadeIn 0.4s 0.4s forwards; }
+  .staggered-fade-in > *:nth-child(5) { animation: fadeIn 0.4s 0.5s forwards; }
 }
